@@ -6,5 +6,10 @@
 function custom_migration_uninstall() {
 	
   \Drupal::configFactory()->getEditable('migrate_plus.migration.rb_d6_user_role')->delete();
+
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.rb_d6_taxonomy_term')->delete();
+  \Drupal::configFactory()->getEditable('migrate_plus.migration.rb_d6_taxonomy_vocabulary')->delete();
+
+  \Drupal::configFactory()->getEditable('migrate_plus.migration_group.testgroup')->delete();
     
-}
+  }
